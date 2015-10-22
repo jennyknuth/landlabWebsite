@@ -2,6 +2,7 @@
  v2.0 | 20110126
  License: none (public domain)
 */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,700,100,900);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,57 +50,22 @@ table {
   box-sizing: border-box; }
 
 body {
-  width: 100vw;
-  text-align: center; }
-
-header {
-  margin: 2em; }
-
-main {
-  text-align: left;
-  position: relative;
-  width: 60vw;
-  margin: 0 auto; }
-  main .show {
-    background: rgba(225, 225, 225, 0.8);
-    padding: 1em;
-    margin: 1em;
-    border: 2px solid white;
-    min-height: 80vw; }
+  background: url(../assets/LandlabClarence.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 img {
-  float: left;
-  margin-right: 2em;
-  width: 20vw; }
-
-img:after {
-  clear: both; }
-
-.column {
-  width: 30vw;
-  float: right; }
-
-.column:after {
-  clear: both; }
-
-.box {
-  background: rgba(225, 225, 225, 0.8);
-  text-align: left;
-  padding: 1em;
-  margin: 1em;
-  border: 2px solid white;
-  display: block;
-  width: 25vw;
   float: left; }
 
-.box:after {
+img:after {
   clear: both; }
 
 html {
   font-size: 1em; }
 
 body {
-  background-color: #6891b8;
   font-family: Lato, sans-serif;
   font-weight: 300;
   line-height: 1.45;

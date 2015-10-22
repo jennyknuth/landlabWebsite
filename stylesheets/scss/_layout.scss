@@ -2,53 +2,18 @@
   box-sizing: border-box;
 }
 body {
-  width: 100vw;
-  text-align: center;
-}
+  // width: 100vw;
+  background: url(../assets/LandlabClarence.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
-header {
-  margin: 2em;
-}
-
-main {
-  text-align: left;
-  position: relative;
-  width: 60vw;
-  margin: 0 auto;
-  .show {
-    background: $transparent;
-    padding: 1em;
-    margin: 1em;
-    border: 2px solid white;
-    min-height: 80vw;
-  }
 }
 
 img {
   float: left;
-  margin-right: 2em;
-  width: 20vw;
 }
 img:after {
-  clear: both;
-}
-.column {
-  width: 30vw;
-  float: right;
-}
-.column:after {
-  clear: both;
-}
-.box {
-  background: $transparent;
-  text-align: left;
-  padding: 1em;
-  margin: 1em;
-  border: 2px solid white;
-  display: block;
-  width: 25vw;
-  float: left;
-}
-.box:after {
   clear: both;
 }
