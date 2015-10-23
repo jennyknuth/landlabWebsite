@@ -1,18 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,700,100,900);
 
 html {
-  font-size: 1em;
+  font-size: 1.2em;
+}
+code {
+  font-family: monospace;
+  background-color: $white;
+  padding: .3em .7em;
 }
 
 body {
   font-family: Lato, sans-serif;
   font-weight: 300;
   line-height: 1.45;
-  color: black;
+  color: $black;
 }
 
 a {
-  color: $red;
+  color: $blue;
   text-decoration: none;
 }
 

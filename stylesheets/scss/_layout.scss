@@ -8,7 +8,17 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+header {
+  .white {
+    height: 23vw;
+    padding: 1em;
+  }
+}
 
+.tag {
+  position: relative;
+  top: 12.5vw;
 }
 
 img {
@@ -16,4 +26,22 @@ img {
 }
 img:after {
   clear: both;
+}
+
+.logo {
+  width: 20vw;
+}
+
+nav {
+  position: relative;
+  top: 13vw;
+  line-height: 2em;
+  div {
+    display: inline-block;
+    background-color: $white;
+    margin: 0 .1vw;
+    a {
+      margin: 1.3em;
+    }
+  }
 }

@@ -6,14 +6,24 @@
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
+  <header class="background">
+    <div class="white">
+      <img class="logo" src="../assets/Landlab-logo.png" alt="Landlab logo">
+      <div class="htext">
+        <h2 class="tag">a python toolkit for modeling surface processes with grids</h2>
+        <nav>
+          <div><a href="">About</a></div>
+          <div><a href="">Examples</a></div>
+          <div><a href="">User Guide</a></div>
+          <div><a href="">Developer API</a></div>
+          <div><a href="">FAQs</a></div>
+          <div><a href="">Tutorials</a></div>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<div><a href="">About</a></div>
-<div><a href="">Examples</a></div>
-<div><a href="">User Guide</a></div>
-<div><a href="">Developer API</a></div>
-<div><a href="">FAQs</a></div>
-<div><a href="">Tutorials</a></div>
-<div ng-view></div>
+  <div ng-view></div>
 
 <script src="scripts/angular/angular.js"></script>
 <script src="scripts/angular/angular-route.js"></script>
