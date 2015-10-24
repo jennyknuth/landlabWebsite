@@ -1,10 +1,47 @@
 <div class="background">
   <div class="white">
+    <h2>What is Landlab?</h2>
+    <p>
+      Landlab is a Python-based modeling environment that allows scientists and students to build numeric
+      landscape models. It specifically supports fields that quantify the earth's surface dynamics such as
+      geomorphology, hydrology, glaciology, and stratigraphy, but can also
+      be used by practitioners in related fields.
+    </p>
+    <p>
+      Landlab provides components to compute flows (such as water, sediment, glacial ice, volcanic
+      material, or landslide debris) across a gridded terrain. With its robust, reusable components Landlab allows
+      scientists to quickly build landscape model experiments and compute mass balances across scale.
+    </p>
+  </div>
+</div>
+<div class="background">
+  <div class="white">
+    <h2>Examples</h2>
+    <p>
+      The following models can easily be built with Landlab's current capabilities:
+      <li>
+        A landscape evolution model using linear diffusion and the stream-power model
+      </li>
+      <li>
+        A model that explores the flexural response to the growth and recession of glaciers
+      </li>
+      <li>
+        An ecohydrology model in which vegetation on two sides of a valley grows and dies in response to stochastic storms and solar forcing throughout the year
+      </li>
+      <li>
+        A model that routes hydrographs across a watershed based on rainfall inputs
+      </li>
+
+    </p>
+  </div>
+</div>
+<div class="background">
+  <div class="white">
     <h2>Installing Landlab</h2>
 
     <p>
       To install Landlab, you will need a Python distribution that includes
-          <li>Python 2.7 (to run Landlab with Python 3, see here)</li>
+          <li>Python 2.7 (to run Landlab with Python 3, <a href="http://landlab.readthedocs.org/en/latest/install.html">see here</a>)</li>
           <li>Numpy 1.8 or greater</li>
           <li>Scipy 0.12 or greater</li>
           <li>netCDF4 (will run without, but recommended)</li>
@@ -14,7 +51,7 @@
 
   <p> To fulfill these requirements we recommend a preassembled scientific Python
   distribution such as <a href="https://www.continuum.io/downloads">Continuum
-  IO’s Anaconda.</a> Follow this link for instructions on <a href="http://landlab.readthedocs.org/en/latest/install.html">installing your Python distribution.</a></p>
+  IO’s Anaconda.</a> Follow this link for instructions on <a href="http://landlab.readthedocs.org/en/latest/install.html#installing-python">installing your Python distribution.</a></p>
 
   <p>
     If your Python distribution is complete and up to date, especially <code>setuptools,</code> open a terminal (or the command prompt) and type the following:
@@ -39,7 +76,42 @@
   </p>
 
   <p>
-    Open the Python editor in Anaconda called Spyder.
+    Once you have <a href="http://landlab.readthedocs.org/en/latest/install.html#installing-python">a full Python distribution on your machine</a>, it is vital to
+    check that it has been successfully set as the default copy of Python on
+    your system. Open a command prompt (Terminal on a Mac, or Command Prompt
+    on a PC) and type the lines below (note the <code>></code> indicates that you are on a
+    command line):
+  </p>
+
+  <p>
+   <code>
+     > which python
+   </code>
+  </p>
+  <p>
+   <code>
+     > which ipython
+   </code>
+  </p>
+  <p>
+    In each case, the path should be the same, and it should clearly refer to Anaconda (or
+    Canopy). Details will depend on your operating system but it could look something like this:
+  </p>
+
+  <p>
+   <code>
+     /anaconda/bin/python
+   </code>
+  </p>
+  <p>
+    If you don’t see reference to your newly installed
+    distribution (i.e., <code>/anaconda</code>), <a href="http://landlab.readthedocs.org/en/latest/correcting_python_version.html#correcting-python-version">click here</a> to resolve the problem.
+  </p>
+
+  <p>
+    Once the path to both <code>python</code> and
+    <code>ipython</code> point to your new distribution, open the
+    Python editor in Anaconda called Spyder.
   </p>
 
   <p>
@@ -51,12 +123,11 @@
     Alternatively you can open a standard terminal window, such as an
     xterm (X11.app) or terminal window (Terminal.app) on a Mac, or a command
     prompt on a Windows machine. If you do use a standard terminal and run into
-    problems, make sure you have <a href="http://landlab.readthedocs.org/en/latest/install.html">resolved your path issues.</a>
+    problems, make sure you have <a href="http://landlab.readthedocs.org/en/latest/correcting_python_version.html#correcting-python-version">resolved your path issues.</a>
   </p>
 
   <p>
-    To ensure that your version of pip (a package installer) is up-to-date,
-    enter the following command:
+    Ensure that your version of pip (a package installer) is up-to-date by typing:
   </p>
 
   <p>
@@ -91,7 +162,7 @@
 
   <p>
     Once the Anaconda packages are updated and the
-    correct version of pip is installed, now install netCDF4:
+    correct version of pip is installed, now install <code>netCDF4</code>:
   </p>
 
   <p>
@@ -110,10 +181,12 @@
     </code>
   </p>
 
-  Once Landlab has been successfully installed, on the
-  Python shell line, check to make sure it is up-to-date (note that those are
-  double underscores around version; also note that you may need to close and
-  reopen Anaconda before typing the below commands):
+  <p>
+    Once Landlab has been successfully installed, on the
+    Python shell line, check to make sure it is up-to-date (note that those are
+    double underscores around version; also note that you may need to close and
+    reopen Anaconda before typing the below commands):
+  </p>
 
   <p>
     <code>
@@ -136,224 +209,55 @@
      development team to make sure you have the latest version.
    </p>
 
-  Once you have a full Python distribution on your machine, it is vital to check
-that it has been successfully set as the default copy of Python on your system.
-Open a command prompt (Terminal on a Mac, or Command Prompt on a PC) and type
-the lines below (note the > indicates that you are on a command line):
+    <h3>
+      Developer Installation—Installing from Landlab Source Code
+    </h3>
+    <p>
+      For users who have gotten a feel for Landlab and want to
+      keep up with the absolute latest Landlab developments and contribute code back to the Landlab repository,
+      <a href="http://landlab.readthedocs.org/en/latest/dev_guide_install.html#dev-install">follow these directions</a>.
+    </p>
+  </div>
+</div>
 
-  > which python > which ipython In each case, path should be the same (except
-  the (i)python at the end), and it should clearly refer to Anaconda (or
-  Canopy). Details will depend on your operating system. For instance, Dan’s
-  Macbook Pro gives:
-
-  /anaconda/bin/python If you don’t see reference to your newly installed
-  /distribution, click here to resolve the problem.
-
-
-
-  Landlab uses setuptools for packaging and is configured to automatically
-  download and install the most up-to-date version of its dependencies from
-  pip, if a satisfactory version is not already installed.
-
-
-    Most of the bug reports we get
-    about problems installing Landlab relate to conflicts with old versions of
-    Python on machines.
-
-    Common symptoms are running the python setup commands at
-    the end of this file, but then not being able to load landlab. If you
-    suspect this might be happening to you after you’ve installed one of the
-    distributions described below, click here.
+<div class="background">
+  <div class="white">
+    <h2>Updating Landlab</h2>
 
     <p>
-
+      As Landlab is still relatively early in its development
+      cycle, the code will update fairly often with frequent new release versions.
+      To take advantage of new features and new library
+      additions, we recommend you update Landlab regularly.
     </p>
 
+    <p>
+      If you installed Landlab
+      through the instructions on this page, simply use <code>pip</code>
+      to update, like so:
+    </p>
+    <p>
+      <code>
+        > pip install landlab --upgrade
+      </code>
+    </p>
+    <p>
+      If, on the other hand, that gives you <a href="http://landlab.readthedocs.org/en/latest/install.html#updating-landlab" target="_blank">errors, click here</a> for guidance on how to resolve them.
+    </p>
 
-    To install Landlab, you will need an up-to-date Python package manager.
-
-    > pip install --upgrade pip
-    > pip install landlab
-
-
-
-    On all platforms (Linux, Windows
-    7 or greater, and MacOS X), we recommend Continuum IO’s Anaconda, as its
-    conda package manager makes controlling your Python packages easier. (It is
-    also possible to use Enthought’s Canopy, but be aware you will need to sign
-    up for an academic license with Enthought to take full advantage of its
-    features.) Download and follow the appropriate instructions for your
-    operating system/distribution. These collections already include compatible
-    (and in some cases accelerated) versions of all of landlab’s dependencies.
-    When the distribution asks if you want to set it as the default Python for
-    your system, say yes. Note that both Canopy and Anaconda also provide a
-    front-end, or GUI environment, from which you can work, making coding,
-    running code, and debugging relatively easy.
-
-    On Linux systems, you can also install Python and the Landlab dependencies
-    from your package manager. If you’re running Linux but aren’t that familiar
-    with handling Python packages in it, this might help.
-
-    (Landlab uses setuptools for packaging and is configured to automatically
-    download and install the most up-to-date version of its dependencies from
-    PyPI, if a satisfactory version is not already installed.)
-
-    Once you have a full Python distribution on your machine, it is vital to check
-that it has been successfully set as the default copy of Python on your system.
-Open a command prompt (Terminal on a Mac, or Command Prompt on a PC) and type
-the lines below (note the > indicates that you are on a command line):
-
-    > which python > which ipython In each case, path should be the same (except
-    the (i)python at the end), and it should clearly refer to Anaconda (or
-    Canopy). Details will depend on your operating system. For instance, Dan’s
-    Macbook Pro gives:
-
-    /anaconda/bin/python If you don’t see reference to your newly installed
-    /distribution, click here to resolve the problem.
-
-    Installing Landlab
-
-    Note If you already have a Landlab install on your
-    machine, see updating landlab, below.
-
-    Note If you already had a Python
-    distribution on your machine, but it’s a bit old, remember to update both
-    the distribution itself and its internal packages before attempting a
-    Landlab install, to make sure the necessary dependencies are up to date.
-
-    Do
-    this from the command prompt for Anaconda, using: conda update --all (two
-    dashes), then also conda update setuptools (or through the GUI in Canopy).
-
-    Also update or install netCDF4 through conda if you need to.
-
-    Here we
-    describe how to install the latest release package of Landlab. Note that
-    this method of installation hides the code behind Landlab. If you are an
-    experienced Landlab user and want to actually edit existing Landlab code and
-    add to the Landlab repository, please follow the developers’ installation
-    instructions here.
-
-    We here assume that you have read the previous section and you have now
-    installed a Python front-end on your computer (which should have also
-    installed a Python distribution) and that your default Python path is set
-    correctly (more on Python path here).
-
-    The instructions below describe the installation of Landlab with Anaconda.
-    If, however, you want a bit more advice on beating your Linux system into
-    shape with regards to running Python and getting Landlab, you can follow
-    this link.
-
-    Quick Landlab Install Instructions (For Experienced Python Users) If you are
-    new to Python, you probably should see instructions here for Anaconda users.
-    Otherwise, if you don’t like details, continue!
-
-    Installing Landlab Using
-    using Anaconda - Recommended Method This should work for Anaconda users with
-    Windows 7+, Mac OS 10.6+, or Ubuntu Linux (only the latest version has been
-    tested).
-
-    Open the Python editor in Anaconda called Spyder.
-
-    On the Spyder toolbar, go to Tools → Open command prompt to open the command
-    line. Alternatively you can open a standard terminal window, such as an
-    xterm (X11.app) or terminal window (Terminal.app) on a Mac, or a command
-    prompt on a Windows machine. If you do use a standard terminal and run into
-    problems, make sure you have resolved your path issues).
-
-    To ensure that your version of pip (a package installer) is up-to-date,
-    enter the following command:
-
-    > pip install --upgrade pip Next, make sure the necessary dependencies are
-    up-to-date. The following conda command will update all Anaconda packages
-    (Note the conda command below handles Anaconda-supported package
-    installation and updates):
-
-    > conda update --all Installing also requires a fully up-to-date version of
-    setuptools, which (irritatingly) is not updated by the –all call above. So
-    also run:
-
-    > conda update setuptools Once the Anaconda packages are updated and the
-    correct version of pip is installed, now install netCDF4:
-
-    > conda install netCDF4 Now to install Landlab! Enter the following command:
-
-    > pip install landlab Once Landlab has been successfully installed, on the
-    Python shell line, check to make sure it is up-to-date (note that those are
-    double underscores around version; also note that you may need to close and
-    reopen Anaconda before typing the below commands):
-
-    >>> import landlab >>> landlab.__version__ The version number is changing
-    rapidly at this point, but it should be something higher than 0.1.18. If you
-    are having problems with Landlab, check with the Landlab development team to
-    make sure you have the latest version.
-
-    Developer Installation - Installing from Landlab Source Code This is
-    recommended only for users who have gotten a feel for Landlab and want to
-    keep up with the absolute latest Landlab developments and contribute codes
-    back to the Landlab repository. If this is not you, please follow the
-    standard installation instructions above. Otherwise, if you are ready to
-    become a Landlab developer, follow these directions.
-
-    Updating Landlab As Landlab is still relatively early in its development
-    cycle, the code will update fairly often and new release versions will
-    become available. To take advantage of new features and new library
-    additions, we recommend you update Landlab fairly frequently.
-
-    Note Whenever you update Landlab, we strongly recommend you also update your
-    Python package! For Anaconda, use the conda package manager from a command
-    prompt: > conda update –all #(two dashes) (From Canopy, use the GUI to
-    update all the available new packages listed.) If you installed Landlab
-    through the instructions on this page, this is trivial. Simply use pip again
-    to update, like so:
-
-    > pip install landlab --upgrade However, if you have ever used another
-    method to install Landlab on your machine, this might not be adequate (i.e.,
-    pip will give you error messages). The first thing to do in such a case is
-    to try a full uninstall and reinstall:
-
-    > pip uninstall landlab > pip install landlab Still having problems? This
-    probably means that some time early in our development cycle you installed
-    Landlab with one of our old procedures. The clue will be that you still have
-    a (very out of date!) copy of the Landlab code base somewhere on your
-    machine. Another possibility is that you’ve previously tried a developer
-    install. This procedure will also work in this case.
-
-    Try this:
-
-    In a terminal, navigate to the top level directory of that old code, the one
-    that contains the file setup.py. This is likely to be your_home_dir/landlab,
-    if you installed with git and left all the defaults as is. Then:
-
-    > pip uninstall landlab #just to be on the safe side, may get errors again >
-    python setup.py develop -u This should remove the install, if you installed
-    as a developer.
-
-    Still getting error messages? This means we’re going to have to excise the
-    old Landlab install “by hand”. You’re looking to remove any reference to
-    Landlab that lives inside your_python_install/lib/python2.7/site-packages.
-    Do this only after you’ve exhausted other possibilities, above, as packages
-    like pip will get annoyed with you if you start manually deleting their
-    files if they installed them in the first place. To minimize the risk, onc
-    again make sure you have just run:
-
-    > pip uninstall landlab Then find your Python directory with:
-
-    > which python Find that folder, ignoring everything after and including the
-    subfolder bin. Instead, go to your_install/lib/python2.7/site-packages. In
-    here, you should find one (or more) folders referrring to landlab, e.g.,
-    landlab or landlab.egg-link, or some other reference to landlab.egg. Delete
-    these. Leave everything else as it is!
-
-    Now try another pip install:
-
-    > pip install landlab This should now take. Still having problems? This is
-    probably multiple versions of Python on your machine interfering with each
-    other. Solve that problem first, then return to trying to install Landlab.
-    See here for some help. <p>Directions here</p>
-
-  </div> </div>
-
-<div class="background"> <div class="white"> <h2>Examples/Use Cases</h2>
-
-  </div> </div>
+    <p>
+      Whenever you update Landlab, we strongly recommend you <strong>also update your
+      Python package!</strong> For Anaconda, use the conda package manager from a command
+      prompt:
+      <p>
+        <code>
+          > conda update --all
+        </code>
+      </p>
+    </p>
+    <p>
+      From Canopy, use the GUI to
+      update all the available new packages listed.
+    </p>
+  </div>
+</div>

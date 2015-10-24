@@ -86,7 +86,7 @@ nav {
 
 .background {
   margin-top: 10vh;
-  background-color: rgba(246, 247, 196, 0.7);
+  background-color: rgba(246, 247, 196, 0.5);
   padding: 1em 5.5em; }
 
 .white {
@@ -115,9 +115,9 @@ a {
 p {
   margin-bottom: 1.3em; }
 
-h1, h2, h4 {
+h1, h2, h3, h4 {
   margin-bottom: 0.5em;
-  font-weight: inherit;
+  font-weight: 400;
   line-height: 1.2; }
 
 h1 {
