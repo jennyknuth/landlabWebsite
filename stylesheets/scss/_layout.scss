@@ -11,14 +11,15 @@ body {
 }
 header {
   .white {
-    height: 23vw;
+    height: 24vw;
     padding: 1em;
   }
 }
 
 .tag {
+  font-size: 2.1vw;
   position: relative;
-  top: 12.5vw;
+  top: 12.6vw;
 }
 
 img {
@@ -34,13 +35,14 @@ img:after {
 
 nav {
   position: relative;
-  top: 13vw;
-  line-height: 2em;
+  top: 13.3vw;
+  line-height: 5vh;
   div {
     display: inline-block;
     background-color: $white;
-    margin: 0 .1vw;
+    margin: 0 .09vw;
     a {
+      font-size: 1.32vw;
       margin: 1.3em;
     }
   }

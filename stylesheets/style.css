@@ -57,12 +57,13 @@ body {
   background-size: cover; }
 
 header .white {
-  height: 23vw;
+  height: 24vw;
   padding: 1em; }
 
 .tag {
+  font-size: 2.1vw;
   position: relative;
-  top: 12.5vw; }
+  top: 12.6vw; }
 
 img {
   float: left; }
@@ -75,17 +76,18 @@ img:after {
 
 nav {
   position: relative;
-  top: 13vw;
-  line-height: 2em; }
+  top: 13.3vw;
+  line-height: 5vh; }
   nav div {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.8);
-    margin: 0 0.1vw; }
+    margin: 0 0.09vw; }
     nav div a {
+      font-size: 1.32vw;
       margin: 1.3em; }
 
 .background {
-  margin-top: 10vh;
+  margin-top: 10vmin;
   background-color: rgba(246, 247, 196, 0.5);
   padding: 1em 5.5em; }
 
